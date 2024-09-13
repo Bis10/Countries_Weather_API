@@ -12,8 +12,8 @@ import { Container, Row } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import { initializeCountries } from "../services/countriesServices";
 import { search } from "../store/countriesSlice";
-import { LinkContainer } from "react-router-bootstrap";
 import { addFavourite, removeFavourite } from "../store/favouritesSlice";
+import { Link } from "react-router-dom";
 
 const Countries = () => {
   const dispatch = useDispatch();
@@ -72,7 +72,7 @@ const Countries = () => {
             <Col className="mt-5" key={country.name.official}>
               {/* Link will be here */}
               <Card className="h-100">
-                <LinkContainer
+                <Link
                   to={`/countries/${country.name.common}`}
                   state={{ country: country }}
                 >
@@ -87,7 +87,7 @@ const Countries = () => {
                       maxHeight: "200px",
                     }}
                   />
-                </LinkContainer>
+                </Link>
                 <Card.Body className="d-flex flex-column">
                   <Card.Title>{country.name.common}</Card.Title>
                   <Card.Subtitle className="mb-5 text-muted">
