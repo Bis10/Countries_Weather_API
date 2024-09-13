@@ -11,6 +11,7 @@ import { Container, Row } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import { initializeCountries } from "../services/countriesServices";
 import { search } from "../store/countriesSlice";
+import { LinkContainer } from "react-router-bootstrap";
 
 const Countries = () => {
   const dispatch = useDispatch();
@@ -63,17 +64,20 @@ const Countries = () => {
           <Col className="mt-5" key={country.name.official}>
             {/* Link will be here */}
             <Card className="h-100">
-              <Card.Img
-                variant="top"
-                src={country.flags.svg}
-                alt={country.name.common}
-                className="rounded h-50"
-                style={{
-                  objectFit: "cover",
-                  minHeight: "200px",
-                  maxHeight: "200px",
-                }}
-              />
+              <LinkContainer to={`/countries/${country.name.common}`}
+              state={{country: country}}>
+                <Card.Img
+                  variant="top"
+                  src={country.flags.svg}
+                  alt={country.name.common}
+                  className="rounded h-50"
+                  style={{
+                    objectFit: "cover",
+                    minHeight: "200px",
+                    maxHeight: "200px",
+                  }}
+                />
+              </LinkContainer>
               <Card.Body className="d-flex flex-column">
                 <Card.Title>{country.name.common}</Card.Title>
                 <Card.Subtitle className="mb-5 text-muted">
@@ -84,7 +88,9 @@ const Countries = () => {
                   className="flex-grow-1 justify-content-center"
                 >
                   <ListGroupItem>
-                    <i className="bi bi-people me-2">{country.population}</i>
+                    <i className="bi bi-people me-2">
+                      {country.population.toLocaleString()}
+                    </i>
                   </ListGroupItem>
                   {/* Add 2 additional list items, containing currencies for the country and languages */}
                   <ListGroupItem>
