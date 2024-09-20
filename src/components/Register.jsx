@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { auth, registerWithEmailAndPassword } from '../auth/firebase';
 import {useAuthState} from "react-firebase-hooks/auth";
 import { useNavigate } from 'react-router-dom';
+import { Button } from 'react-bootstrap';
 
 const Register = () => {
     const [email, setEmail] = useState("");
@@ -27,21 +28,22 @@ const Register = () => {
       <input
         type="text"
         value={name}
-        onChange={(e) => setName(e, target.value)}
+        onChange={(e) => setName(e.target.value)}
         placeholder="Full Name"
       />
       <input
         type="email"
         value={email}
-        onChange={(e) => setEmail(e, target.value)}
+        onChange={(e) => setEmail(e.target.value)}
         placeholder="Email"
       />
       <input
         type="password"
         value={password}
-        onChange={(e) => setPassword(e, target.value)}
+        onChange={(e) => setPassword(e.target.value)}
         placeholder="Password"
       />
+      <Button onClick={handleRegister}>Register</Button>
     </div>
   );
 };
