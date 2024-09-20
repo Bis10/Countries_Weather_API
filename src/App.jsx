@@ -5,6 +5,7 @@ import ErrorPage from './components/ErrorPage'
 import Countries from './components/Countries'
 import Home from './components/Home'
 import CountrySingle from './components/CountrySingle'
+import Register from './components/Register'
 
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
           <Route>
             {/* This is where other routes will go to allow layout to be visible */}
             <Route path="/" element={<Home />} />
+            <Route path="/register" element={<Register />} />
             <Route path="/countries" element={<Countries />} />
             <Route path="/countries/:single" element={<CountrySingle />} />
             <Route path="*" element={<ErrorPage />} />
