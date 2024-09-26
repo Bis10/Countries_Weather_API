@@ -1,21 +1,17 @@
-import { useState } from 'react'
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import Layout from './pages/Layout'
-import ErrorPage from './components/ErrorPage'
-import Countries from './components/Countries'
-import Home from './components/Home'
-import CountrySingle from './components/CountrySingle'
-import Register from './components/Register'
-import Login from './components/Login'
-import { useAuthState } from 'react-firebase-hooks/auth'
-import { auth } from './auth/firebase'
-import ProtectedRoute from './auth/ProtectedRoute'
+import { useAuthState } from "react-firebase-hooks/auth";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { auth } from "./auth/firebase";
+import ProtectedRoute from "./auth/ProtectedRoute";
+import Countries from "./components/Countries";
+import CountrySingle from "./components/CountrySingle";
+import ErrorPage from "./components/ErrorPage";
+import Favourites from "./components/Favourites";
+import Home from "./components/Home";
+import Login from "./components/Login";
+import Register from "./components/Register";
+import Layout from "./pages/Layout";
 
-
-
-
-
-function App() {
+const App = () => {
   const [user] = useAuthState(auth);
 
   return (
@@ -23,7 +19,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route>
-            {/* This is where other routes will go to allow layout to be visible */}
+            {/* This is where other routes will go to allow Layout to be visible everywhere */}
             <Route path="/" element={<Home />} />
             <Route path="/register" element={<Register />} />
             <Route path="/login" element={<Login />} />
@@ -31,6 +27,7 @@ function App() {
             <Route element={<ProtectedRoute user={user} />}>
               <Route path="/countries" element={<Countries />} />
               <Route path="/countries/:single" element={<CountrySingle />} />
+              <Route path="/favourites" element={<Favourites />} />
             </Route>
 
             <Route path="*" element={<ErrorPage />} />
@@ -39,6 +36,6 @@ function App() {
       </Routes>
     </BrowserRouter>
   );
-}
+};
 
-export default App
+export default App;
