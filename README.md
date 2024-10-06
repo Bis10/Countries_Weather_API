@@ -64,3 +64,22 @@ This project is a React application that allows users to view country informatio
 - Create a Firestore database and set up rules for read/write access.
 - Configure Firebase in your project.
 
+### Live Page
+Currently, there is no live deployment for this project.
+
+### Screenshot
+There are no screenshots available at the moment.
+
+### Sources
+- React Documentation: Learn more about React.
+- Redux Documentation: Understand Redux.
+- Firebase Documentation: Set up Firebase here.
+- REST Countries API: Documentation available here.
+- OpenWeatherMap API: Explore the weather API here.
+
+### Authors and Acknowledgment
+- [GitHub @martin-holland](https://github.com/martin-holland)
+- [GitHub @bishnu-suyel](https://github.com/bishnu-suyel)
+- [LinkedIn @bishnu-suyel](https://www.linkedin.com/in/bishnu-suyel)
+
+
