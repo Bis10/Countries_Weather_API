@@ -13,28 +13,46 @@ const Layout = () => {
   return (
     <Container fluid>
       <Row>
-        <Navbar bg="light" variant="light">
+        <Navbar
+          style={{
+            marginBottom: "1rem",
+          }}
+          bg="light"
+          variant="light"
+        >
           <Container className="justify-content-end">
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
-              <Nav>
+              <Nav className="me-auto">
                 <LinkContainer to="/">
-                  <Nav.Link>Home</Nav.Link>
+                  <Nav.Link className="fw-bold">Home</Nav.Link>
                 </LinkContainer>
                 <LinkContainer to="/countries">
-                  <Nav.Link>Countries</Nav.Link>
+                  <Nav.Link className="fw-bold">Countries</Nav.Link>
                 </LinkContainer>
                 <LinkContainer to="/favourites">
-                  <Nav.Link>Favourites</Nav.Link>
+                  <Nav.Link className="fw-bold">Favourites</Nav.Link>
                 </LinkContainer>
                 <LinkContainer to="/register">
-                  <Nav.Link>Register</Nav.Link>
+                  <Nav.Link className="fw-bold">Register</Nav.Link>
                 </LinkContainer>
                 <LinkContainer to="/login">
-                  <Nav.Link>Login</Nav.Link>
+                  <Nav.Link className="fw-bold">Login</Nav.Link>
                 </LinkContainer>
-                {user && <Button onClick={logout}>Logout</Button>}
-                <div>{user && `Hello ${user?.email}`}</div>
+                {user && (
+                  <Button onClick={logout} className="fw-bold">
+                    Logout
+                  </Button>
+                )}
+                <div
+                  style={{
+                    marginLeft: "35rem",
+                    marginTop: "0.5rem",
+                  }}
+                  className="text-success"
+                >
+                  Hello, {user?.email}
+                </div>
               </Nav>
             </Navbar.Collapse>
           </Container>
