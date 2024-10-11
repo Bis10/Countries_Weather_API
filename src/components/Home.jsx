@@ -115,13 +115,14 @@ const Home = () => {
               </Row>
 
               {/* Accordion for Additional Information */}
-              <Accordion defaultActiveKey="0">
+              <Accordion defaultActiveKey="0" className="mt-4">
                 <Accordion.Item eventKey="0">
                   <Accordion.Header>Explore Features</Accordion.Header>
                   <Accordion.Body>
                     <ListGroup variant="flush">
                       <ListGroup.Item>
-                        <strong>Register:</strong> Register with your name & email.
+                        <strong>Register:</strong> Register with your name &
+                        email.
                       </ListGroup.Item>
                       <ListGroup.Item>
                         <strong>Log In:</strong> Log in with email & password.
@@ -132,8 +133,8 @@ const Home = () => {
                         population, currency, official languages, and more.
                       </ListGroup.Item>
                       <ListGroup.Item>
-                        <strong>Favorite Countries:</strong> You can add countries to your favorites list and manage them
-                        easily.
+                        <strong>Favorite Countries:</strong> You can add
+                        countries to your favorites list and manage them easily.
                       </ListGroup.Item>
                     </ListGroup>
                   </Accordion.Body>
