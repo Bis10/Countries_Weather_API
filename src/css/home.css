@@ -1,0 +1,17 @@
+/* home.css */
+.no-border {
+  border: none !important; /* Important to override Bootstrap styles */
+  box-shadow: none !important; /* Removes shadow which can look like a border */
+}
+
+.card {
+  border: none !important; /* Remove border from card */
+}
+
+.accordion-item {
+  border: none !important; /* Remove border from accordion items */
+}
+
+.row {
+  border: none !important;
+}
