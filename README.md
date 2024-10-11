@@ -34,7 +34,7 @@ This project is a React application that allows users to view country informatio
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/Bis10/Countries_API
+   git clone https://github.com/bishnu-suyel/Countries_API
    ```
 
 2. Navigate to the project directory:
@@ -71,11 +71,11 @@ Currently, there is no live deployment for this project.
 There are no screenshots available at the moment.
 
 ### Sources
-- React Documentation: Learn more about React.
-- Redux Documentation: Understand Redux.
-- Firebase Documentation: Set up Firebase here.
-- REST Countries API: Documentation available here.
-- OpenWeatherMap API: Explore the weather API here.
+- [React Documentation: Learn more about React](https://react.dev/learn)
+- [Redux Documentation: Understand Redux](https://redux.js.org/introduction/getting-started)
+- [Firebase Documentation: Set up Firebase here](https://firebase.google.com/docs/)
+- [REST Countries API:](https://restcountries.com/)
+- [OpenWeatherMap API: Explore the weather API here](https://openweathermap.org/guide)
 
 ### Authors and Acknowledgment
 - [GitHub @martin-holland](https://github.com/martin-holland)
