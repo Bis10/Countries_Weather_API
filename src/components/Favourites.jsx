@@ -7,7 +7,6 @@ import {
   clearFavourites,
   getFavouritesFromSource,
 } from "../store/favouritesSlice";
-import CountrySingle from "./CountrySingle";
 import { CountryCard } from "./CountryCard";
 
 // Favourites to be written
