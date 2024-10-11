@@ -10,16 +10,11 @@ import { auth, logout } from "../auth/firebase";
 
 const Layout = () => {
   const [user] = useAuthState(auth);
+
   return (
     <Container fluid>
       <Row>
-        <Navbar
-          style={{
-            marginBottom: "1rem",
-          }}
-          bg="light"
-          variant="light"
-        >
+        <Navbar style={{ marginBottom: "1rem" }} bg="light" variant="light">
           <Container className="justify-content-end">
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
@@ -33,26 +28,32 @@ const Layout = () => {
                 <LinkContainer to="/favourites">
                   <Nav.Link className="fw-bold">Favourites</Nav.Link>
                 </LinkContainer>
-                <LinkContainer to="/register">
-                  <Nav.Link className="fw-bold">Register</Nav.Link>
-                </LinkContainer>
-                <LinkContainer to="/login">
-                  <Nav.Link className="fw-bold">Login</Nav.Link>
-                </LinkContainer>
-                {user && (
-                  <Button onClick={logout} className="fw-bold">
-                    Logout
-                  </Button>
+                {/* Conditionally render Register and Login links */}
+                {!user ? (
+                  <>
+                    <LinkContainer to="/register">
+                      <Nav.Link className="fw-bold">Register</Nav.Link>
+                    </LinkContainer>
+                    <LinkContainer to="/login">
+                      <Nav.Link className="fw-bold">Login</Nav.Link>
+                    </LinkContainer>
+                  </>
+                ) : (
+                  <>
+                    <Button onClick={logout} className="fw-bold">
+                      Logout
+                    </Button>
+                    <div
+                      style={{
+                        marginLeft: "50rem",
+                        marginTop: "0.5rem",
+                      }}
+                      className="text-success"
+                    >
+                      Welcome, {user.email.split("@")[0]}
+                    </div>
+                  </>
                 )}
-                <div
-                  style={{
-                    marginLeft: "35rem",
-                    marginTop: "0.5rem",
-                  }}
-                  className="text-success"
-                >
-                  Hello, {user?.email}
-                </div>
               </Nav>
             </Navbar.Collapse>
           </Container>
