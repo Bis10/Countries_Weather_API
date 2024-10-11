@@ -14,7 +14,11 @@ const Layout = () => {
   return (
     <Container fluid>
       <Row>
-        <Navbar style={{ marginBottom: "1rem" }} bg="light" variant="light">
+        <Navbar
+          style={{ marginBottom: "1rem", backgroundColor: "#F0FFFF" }}
+          // bg="light"
+          // variant="light"
+        >
           <Container className="justify-content-end">
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
@@ -40,7 +44,15 @@ const Layout = () => {
                   </>
                 ) : (
                   <>
-                    <Button onClick={logout} className="fw-bold">
+                    <Button
+                      onClick={logout}
+                      className="fw-bold"
+                      style={{
+                        color: "black",
+                        backgroundColor: "#F0FFFF",
+                        border: "none",
+                      }}
+                    >
                       Logout
                     </Button>
                     <div
