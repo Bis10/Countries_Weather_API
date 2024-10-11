@@ -7,10 +7,15 @@ import {
   ListGroup,
   Accordion,
 } from "react-bootstrap";
+import "../css/home.css"
 import globeImage from "../assets/globe.jpg"; // Adjust the path according to your structure
 import weather from "../assets/weather.avif";
 import languages from "../assets/languages.webp";
 import flags from "../assets/flags.jpg";
+import registerImage from "../assets/registration.jpg"; // Add your register image path
+import loginImage from "../assets/login.webp"; // Add your login image path
+import countriesImage from "../assets/countries.webp"; // Add your countries image path
+import favoritesImage from "../assets/favourites.png"; // Add your favorites image path
 
 const Home = () => {
   return (
@@ -38,7 +43,7 @@ const Home = () => {
       </div>
 
       {/* Features Section */}
-      <Row className="justify-content-center mb-4">
+      <Row className="justify-content-center mb-4" >
         <Col md={10}>
           <Card>
             <Card.Body>
@@ -117,26 +122,98 @@ const Home = () => {
               {/* Accordion for Additional Information */}
               <Accordion defaultActiveKey="0" className="mt-4">
                 <Accordion.Item eventKey="0">
-                  <Accordion.Header>Explore Features</Accordion.Header>
+                  <Accordion.Header className="text-center">
+                    Explore Features
+                  </Accordion.Header>
                   <Accordion.Body>
-                    <ListGroup variant="flush">
-                      <ListGroup.Item>
-                        <strong>Register:</strong> Register with your name &
-                        email.
-                      </ListGroup.Item>
-                      <ListGroup.Item>
-                        <strong>Log In:</strong> Log in with email & password.
-                      </ListGroup.Item>
-                      <ListGroup.Item>
-                        <strong>Countries:</strong> Once logged in, you can see
-                        comprehensive data about countries, including
-                        population, currency, official languages, and more.
-                      </ListGroup.Item>
-                      <ListGroup.Item>
-                        <strong>Favorite Countries:</strong> You can add
-                        countries to your favorites list and manage them easily.
-                      </ListGroup.Item>
-                    </ListGroup>
+                    <Row className="text-center">
+                      {/* Feature Cards Inside Accordion */}
+                      <Col md={3}>
+                        <Card className="mb-4">
+                          <Card.Img
+                            variant="top"
+                            src={registerImage} // Image for register
+                            alt="Register"
+                            style={{
+                              width: "100%",
+                              height: "200px",
+                              objectFit: "cover",
+                            }}
+                          />
+                          <Card.Body>
+                            <Card.Title>Register</Card.Title>
+                            <Card.Text>
+                              "Register with your name & email to create an
+                              account."
+                            </Card.Text>
+                          </Card.Body>
+                        </Card>
+                      </Col>
+
+                      <Col md={3}>
+                        <Card className="mb-4">
+                          <Card.Img
+                            variant="top"
+                            src={loginImage} // Image for login
+                            alt="Log In"
+                            style={{
+                              width: "100%",
+                              height: "200px",
+                              objectFit: "cover",
+                            }}
+                          />
+                          <Card.Body>
+                            <Card.Title>Log In</Card.Title>
+                            <Card.Text>
+                              "Log in with your email & password to access your
+                              account."
+                            </Card.Text>
+                          </Card.Body>
+                        </Card>
+                      </Col>
+
+                      <Col md={3}>
+                        <Card className="mb-4">
+                          <Card.Img
+                            variant="top"
+                            src={countriesImage} // Image for countries
+                            alt="Countries"
+                            style={{
+                              width: "100%",
+                              height: "200px",
+                              objectFit: "cover",
+                            }}
+                          />
+                          <Card.Body>
+                            <Card.Title>Countries</Card.Title>
+                            <Card.Text>
+                              "Explore comprehensive data about countries."
+                            </Card.Text>
+                          </Card.Body>
+                        </Card>
+                      </Col>
+
+                      <Col md={3}>
+                        <Card className="mb-4">
+                          <Card.Img
+                            variant="top"
+                            src={favoritesImage} // Image for favorites
+                            alt="Favorite Countries"
+                            style={{
+                              width: "100%",
+                              height: "200px",
+                              objectFit: "cover",
+                            }}
+                          />
+                          <Card.Body>
+                            <Card.Title>Favorite Countries</Card.Title>
+                            <Card.Text>
+                              "Easily manage your list of favorite countries."
+                            </Card.Text>
+                          </Card.Body>
+                        </Card>
+                      </Col>
+                    </Row>
                   </Accordion.Body>
                 </Accordion.Item>
               </Accordion>
