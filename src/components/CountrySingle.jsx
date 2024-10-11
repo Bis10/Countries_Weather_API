@@ -1,6 +1,14 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { Button, Col, Container, Image, Row, Spinner } from "react-bootstrap";
+import {
+  Button,
+  Col,
+  Container,
+  Image,
+  Row,
+  Spinner,
+  Card,
+} from "react-bootstrap";
 import { useLocation, useNavigate } from "react-router-dom";
 
 const CountrySingle = (props) => {
@@ -31,52 +39,100 @@ const CountrySingle = (props) => {
 
   if (isWeatherLoading) {
     return (
-      <Col className="text-center m-5">
+      <Container className="text-center m-5">
         <Spinner
           animation="border"
           role="status"
-          className="center"
           variant="info"
+          className="my-5"
         >
           <span className="visually-hidden">Loading...</span>
         </Spinner>
-      </Col>
+      </Container>
     );
   }
 
   return (
-    <Container fluid>
-      <Row>
-        <Col className="mt-5 d-flex justify-content-center">
-          <Image src={country.flags.svg} />
-        </Col>
-        <Col>
-          <h2>{country.name.common}</h2>
-          <h3>{country.capital}</h3>
+    <Container className="mt-5">
+      <Row className="justify-content-center">
+        {/* Country Flag and Basic Info */}
+        <Col md={4} className="text-center">
+          <Card className="mb-4">
+            <Card.Img
+              variant="top"
+              src={country.flags.svg}
+              alt="Country Flag"
+              style={{ maxHeight: "300px", objectFit: "contain" }}
+            />
+            <Card.Body>
+              <Card.Title>Country Name: {country.name.common}</Card.Title>
+              <Card.Subtitle className="mb-2 text-muted">
+                <strong>Capital: </strong>
+                {country.capital}
+              </Card.Subtitle>
+              <Card.Subtitle className="mb-2 text-muted">
+                <strong>Region: </strong>
+                {country.region}
+              </Card.Subtitle>
+              <Card.Subtitle className="mb-2 text-muted">
+                <strong>Subregion:</strong> {country.subregion}
+              </Card.Subtitle>
 
+              {/* Display Population */}
+              <Card.Subtitle className="mb-2 text-muted">
+                <strong>Population:</strong>{" "}
+                {new Intl.NumberFormat().format(country.population)}
+              </Card.Subtitle>
+
+              {/* Display Area */}
+              <Card.Subtitle className="mb-2 text-muted">
+                <strong>Area:</strong>{" "}
+                {new Intl.NumberFormat().format(country.area)} km²
+              </Card.Subtitle>
+
+              {/* Display Currency */}
+              <Card.Subtitle className="mb-2 text-muted">
+                <strong>Currency:</strong>{" "}
+                {Object.values(country.currencies)
+                  .map((currency) => currency.name)
+                  .join(", ")}
+              </Card.Subtitle>
+
+              {/* Display Official Languages */}
+              <Card.Subtitle className="mb-2 text-muted">
+                <strong>Languages:</strong>{" "}
+                {Object.values(country.languages).join(", ")}
+              </Card.Subtitle>
+              <Button variant="primary" onClick={() => navigate("/countries")}>
+                Back to Countries
+              </Button>
+            </Card.Body>
+          </Card>
+        </Col>
+
+        {/* Weather Information */}
+        <Col md={6}>
+          <h3>Weather in {country.capital}</h3>
           {weather ? (
             <div>
               <p>
-                Right now it is <strong>{parseInt(weather.main.temp)} </strong>
-                degrees in {country.capital} and{" "}
-                {weather.weather[0].description}
+                Currently, it is{" "}
+                <strong>{parseInt(weather.main.temp)}°C</strong> with{" "}
+                {weather.weather[0].description} in {country.capital}.
               </p>
               <Image
                 src={`http://openweathermap.org/img/wn/${weather.weather[0].icon}@2x.png`}
+                alt="Weather Icon"
+                style={{ width: "80px", height: "80px" }}
               />
             </div>
           ) : (
-            <div>No weather data found</div>
+            <div>No weather data available.</div>
           )}
-          <Button variant="light" onClick={() => navigate("/countries")}>
-            Back to Countries
-          </Button>
         </Col>
       </Row>
     </Container>
   );
-
-  // Cases we will cover together are: Country capital image
 };
 
 export default CountrySingle;
