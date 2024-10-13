@@ -7,7 +7,7 @@ import {
   ListGroup,
   Accordion,
 } from "react-bootstrap";
-import "../css/home.css"
+import "../css/home.css";
 import globeImage from "../assets/globe.jpg"; // Adjust the path according to your structure
 import weather from "../assets/weather.avif";
 import languages from "../assets/languages.webp";
@@ -67,7 +67,7 @@ const Home = () => {
                     />
                     <Card.Body>
                       <Card.Title>Flags</Card.Title>
-                      <Card.Text>
+                      <Card.Text style={{ fontSize: "1.2rem" }}>
                         "Wave your pride, discover the world through its flags!"
                       </Card.Text>
                     </Card.Body>
@@ -89,7 +89,7 @@ const Home = () => {
                     />
                     <Card.Body>
                       <Card.Title>Languages</Card.Title>
-                      <Card.Text>
+                      <Card.Text style={{ fontSize: "1.2rem" }}>
                         "Language: The Bridge to Global Understanding!"
                       </Card.Text>
                     </Card.Body>
@@ -111,7 +111,7 @@ const Home = () => {
                     />
                     <Card.Body>
                       <Card.Title>Weather</Card.Title>
-                      <Card.Text>
+                      <Card.Text style={{ fontSize: "1.2rem" }}>
                         "Chase the Sun in Finland, Dance in the Rain in Brazil!"
                       </Card.Text>
                     </Card.Body>
@@ -143,7 +143,12 @@ const Home = () => {
                             />
                             <Card.Body>
                               <Card.Title>Register</Card.Title>
-                              <Card.Text>
+                              <Card.Text
+                                style={{
+                                  color: "#003366",
+                                  fontStyle: "italic",
+                                }}
+                              >
                                 "Register with your name & email to create an
                                 account."
                               </Card.Text>
@@ -165,7 +170,12 @@ const Home = () => {
                             />
                             <Card.Body>
                               <Card.Title>Log In</Card.Title>
-                              <Card.Text>
+                              <Card.Text
+                                style={{
+                                  color: "#003366",
+                                  fontStyle: "italic",
+                                }}
+                              >
                                 "Log in with your email & password to access
                                 your account."
                               </Card.Text>
@@ -187,7 +197,12 @@ const Home = () => {
                             />
                             <Card.Body>
                               <Card.Title>Countries</Card.Title>
-                              <Card.Text>
+                              <Card.Text
+                                style={{
+                                  color: "#003366",
+                                  fontStyle: "italic",
+                                }}
+                              >
                                 "Explore comprehensive data about countries."
                               </Card.Text>
                             </Card.Body>
@@ -208,7 +223,12 @@ const Home = () => {
                             />
                             <Card.Body>
                               <Card.Title>Favorite Countries</Card.Title>
-                              <Card.Text>
+                              <Card.Text
+                                style={{
+                                  color: "#003366",
+                                  fontStyle: "italic",
+                                }}
+                              >
                                 "Easily manage your list of favorite countries."
                               </Card.Text>
                             </Card.Body>
