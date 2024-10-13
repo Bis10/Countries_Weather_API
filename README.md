@@ -69,7 +69,15 @@ This project is a React application that allows users to view country informatio
 Currently, there is no live deployment for this project.
 
 ### Screenshot
-There are no screenshots available at the moment.
+Here are some screenshots of the application:
+
+| Register Page            | Home Page                |
+|--------------------------|--------------------------|
+| ![Register Screenshot](src/assets/register-screenshot.png) | ![Home Screenshot](src/assets/home-screenshot.png) |
+
+| Countries Page           | Single Country Page      |
+|--------------------------|--------------------------|
+| ![Countries Screenshot](src/assets/countries-screenshot.png) | ![Single Country Screenshot](src/assets/singleCountry-screenshot.png) |
 
 ### Sources
 - [React Documentation: Learn more about React](https://react.dev/learn)
