@@ -20,6 +20,7 @@ This project is a React application that allows users to view country informatio
 - Redux
 - REST Countries API
 - OpenWeatherMap API
+- Unsplash API
 - Firebase (Authentication and Firestore)
 - Axios for API calls
 
