@@ -234,7 +234,7 @@ const Home = () => {
       {/* Footer Section */}
       <footer
         className="mt-5 p-3 text-center"
-        style={{ backgroundColor: "#e7f1ff", borderTop: "1px solid #e9ecef" }}
+        style={{ backgroundColor: "#d0e5ff", borderTop: "1px solid #e9ecef" }}
       >
         <p>
           &copy; {new Date().getFullYear()} Countries App. All rights reserved.
