@@ -78,10 +78,14 @@ const CountrySingle = (props) => {
               variant="top"
               src={country.flags.svg}
               alt="Country Flag"
-              style={{ maxHeight: "300px", objectFit: "contain" }}
+              style={{
+                maxHeight: "300px",
+                objectFit: "contain",
+                marginTop: "20px",
+              }}
             />
             <Card.Body>
-              <Card.Title className="mb-4">
+              <Card.Title className="mb-4 fw-bold">
                 Country Name: {country.name.common}
               </Card.Title>
 
@@ -125,7 +129,7 @@ const CountrySingle = (props) => {
               <Button
                 variant="primary"
                 onClick={() => navigate("/countries")}
-                style={{ marginTop: "20px" }} // Adding 20px space above the button
+                style={{ marginTop: "10px" }}
               >
                 Back to Countries
               </Button>
@@ -137,23 +141,38 @@ const CountrySingle = (props) => {
         <Col md={6}>
           <Card className="shadow-sm border-0 mb-3">
             <Card.Body>
-              <h3 className="text-primary mb-3">
-                Weather in {country.capital}
-              </h3>
+              <h3 className="text-center mb-1">Weather in {country.capital}</h3>
 
               {weather ? (
-                <div className="text-center mb-2">
+                <div className="text-center mb-1">
                   <p className="lead">
                     Currently, it is{" "}
-                    <strong>{parseInt(weather.main.temp)}°C</strong> with{" "}
-                    <strong>{weather.weather[0].description}</strong> in{" "}
-                    <strong>{country.capital}</strong>.
+                    <strong style={{ color: "lightcoral" }}>
+                      {parseInt(weather.main.temp)}°C
+                    </strong>{" "}
+                    with{" "}
+                    <strong style={{ color: "lightcoral" }}>
+                      {weather.weather[0].description}
+                    </strong>{" "}
+                    in <strong>{country.capital}</strong>.
+                  </p>
+                  <p className="lead">
+                    Feels like{" "}
+                    <strong style={{ color: "lightcoral" }}>
+                      {parseInt(weather.main.feels_like)}°C
+                    </strong>
                   </p>
                   <Image
                     src={`http://openweathermap.org/img/wn/${weather.weather[0].icon}@4x.png`}
                     alt="Weather Icon"
-                    style={{ width: "80px", height: "80px" }}
-                    className="mb-2"
+                    style={{
+                      width: "80px",
+                      height: "80px",
+                      backgroundColor: "lightcoral",
+                      padding: "10px",
+                      borderRadius: "50%",
+                    }}
+                    className="mb-1"
                   />
                 </div>
               ) : (
@@ -163,7 +182,7 @@ const CountrySingle = (props) => {
               )}
 
               {/* Display Random Images of the Capital City */}
-              <h4 className="text-secondary mb-3">
+              <h4 className="text-center mb-3">
                 Explore {country.capital}, {country.name.common}
               </h4>
 
