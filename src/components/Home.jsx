@@ -43,7 +43,7 @@ const Home = () => {
       </div>
 
       {/* Features Section */}
-      <Row className="justify-content-center mb-4" >
+      <Row className="justify-content-center mb-4">
         <Col md={10}>
           <Card>
             <Card.Body>
@@ -120,102 +120,104 @@ const Home = () => {
               </Row>
 
               {/* Accordion for Additional Information */}
-              <Accordion defaultActiveKey="0" className="mt-4">
-                <Accordion.Item eventKey="0">
-                  <Accordion.Header className="text-center">
-                    Explore Features
-                  </Accordion.Header>
-                  <Accordion.Body>
-                    <Row className="text-center">
-                      {/* Feature Cards Inside Accordion */}
-                      <Col md={3}>
-                        <Card className="mb-4">
-                          <Card.Img
-                            variant="top"
-                            src={registerImage} // Image for register
-                            alt="Register"
-                            style={{
-                              width: "100%",
-                              height: "200px",
-                              objectFit: "cover",
-                            }}
-                          />
-                          <Card.Body>
-                            <Card.Title>Register</Card.Title>
-                            <Card.Text>
-                              "Register with your name & email to create an
-                              account."
-                            </Card.Text>
-                          </Card.Body>
-                        </Card>
-                      </Col>
+              <Accordion defaultActiveKey="1" className="mt-4">
+                <div className="custom-accordion">
+                  <Accordion.Item eventKey="0">
+                    <Accordion.Header>
+                      <div className="explore-header">Explore Features</div>
+                    </Accordion.Header>
+                    <Accordion.Body>
+                      <Row className="text-center">
+                        {/* Feature Cards Inside Accordion */}
+                        <Col md={3}>
+                          <Card className="mb-4">
+                            <Card.Img
+                              variant="top"
+                              src={registerImage} // Image for register
+                              alt="Register"
+                              style={{
+                                width: "100%",
+                                height: "200px",
+                                objectFit: "cover",
+                              }}
+                            />
+                            <Card.Body>
+                              <Card.Title>Register</Card.Title>
+                              <Card.Text>
+                                "Register with your name & email to create an
+                                account."
+                              </Card.Text>
+                            </Card.Body>
+                          </Card>
+                        </Col>
 
-                      <Col md={3}>
-                        <Card className="mb-4">
-                          <Card.Img
-                            variant="top"
-                            src={loginImage} // Image for login
-                            alt="Log In"
-                            style={{
-                              width: "100%",
-                              height: "200px",
-                              objectFit: "cover",
-                            }}
-                          />
-                          <Card.Body>
-                            <Card.Title>Log In</Card.Title>
-                            <Card.Text>
-                              "Log in with your email & password to access your
-                              account."
-                            </Card.Text>
-                          </Card.Body>
-                        </Card>
-                      </Col>
+                        <Col md={3}>
+                          <Card className="mb-4">
+                            <Card.Img
+                              variant="top"
+                              src={loginImage} // Image for login
+                              alt="Log In"
+                              style={{
+                                width: "100%",
+                                height: "200px",
+                                objectFit: "cover",
+                              }}
+                            />
+                            <Card.Body>
+                              <Card.Title>Log In</Card.Title>
+                              <Card.Text>
+                                "Log in with your email & password to access
+                                your account."
+                              </Card.Text>
+                            </Card.Body>
+                          </Card>
+                        </Col>
 
-                      <Col md={3}>
-                        <Card className="mb-4">
-                          <Card.Img
-                            variant="top"
-                            src={countriesImage} // Image for countries
-                            alt="Countries"
-                            style={{
-                              width: "100%",
-                              height: "200px",
-                              objectFit: "cover",
-                            }}
-                          />
-                          <Card.Body>
-                            <Card.Title>Countries</Card.Title>
-                            <Card.Text>
-                              "Explore comprehensive data about countries."
-                            </Card.Text>
-                          </Card.Body>
-                        </Card>
-                      </Col>
+                        <Col md={3}>
+                          <Card className="mb-4">
+                            <Card.Img
+                              variant="top"
+                              src={countriesImage} // Image for countries
+                              alt="Countries"
+                              style={{
+                                width: "100%",
+                                height: "200px",
+                                objectFit: "cover",
+                              }}
+                            />
+                            <Card.Body>
+                              <Card.Title>Countries</Card.Title>
+                              <Card.Text>
+                                "Explore comprehensive data about countries."
+                              </Card.Text>
+                            </Card.Body>
+                          </Card>
+                        </Col>
 
-                      <Col md={3}>
-                        <Card className="mb-4">
-                          <Card.Img
-                            variant="top"
-                            src={favoritesImage} // Image for favorites
-                            alt="Favorite Countries"
-                            style={{
-                              width: "100%",
-                              height: "200px",
-                              objectFit: "cover",
-                            }}
-                          />
-                          <Card.Body>
-                            <Card.Title>Favorite Countries</Card.Title>
-                            <Card.Text>
-                              "Easily manage your list of favorite countries."
-                            </Card.Text>
-                          </Card.Body>
-                        </Card>
-                      </Col>
-                    </Row>
-                  </Accordion.Body>
-                </Accordion.Item>
+                        <Col md={3}>
+                          <Card className="mb-4">
+                            <Card.Img
+                              variant="top"
+                              src={favoritesImage} // Image for favorites
+                              alt="Favorite Countries"
+                              style={{
+                                width: "100%",
+                                height: "200px",
+                                objectFit: "cover",
+                              }}
+                            />
+                            <Card.Body>
+                              <Card.Title>Favorite Countries</Card.Title>
+                              <Card.Text>
+                                "Easily manage your list of favorite countries."
+                              </Card.Text>
+                            </Card.Body>
+                          </Card>
+                        </Col>
+                      </Row>
+                    </Accordion.Body>
+                  </Accordion.Item>
+                </div>
               </Accordion>
             </Card.Body>
           </Card>
@@ -232,7 +234,7 @@ const Home = () => {
       {/* Footer Section */}
       <footer
         className="mt-5 p-3 text-center"
-        style={{ backgroundColor: "#F0FFFF", borderTop: "1px solid #e9ecef" }}
+        style={{ backgroundColor: "#e7f1ff", borderTop: "1px solid #e9ecef" }}
       >
         <p>
           &copy; {new Date().getFullYear()} Countries App. All rights reserved.
