@@ -51,13 +51,7 @@ const Login = () => {
             <Button
               variant="primary"
               onClick={handleLogin}
-              size="sm"
-              className="w-100 mt-3"
-              style={{
-                padding: "0.25rem 0.5rem", // Custom padding for smaller button
-                fontSize: "0.875rem", // Smaller font size
-                borderRadius: "4px", // Custom border radius
-              }}
+              className="small-button mt-3" 
             >
               Login
             </Button>
