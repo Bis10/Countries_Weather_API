@@ -15,7 +15,7 @@ const Layout = () => {
     <Container fluid>
       <Row>
         <Navbar
-          style={{ marginBottom: "1rem", backgroundColor: "#F0FFFF" }}
+          style={{ marginBottom: "1rem", backgroundColor: "#e7f1ff" }}
           // bg="light"
           // variant="light"
         >
@@ -49,7 +49,7 @@ const Layout = () => {
                       className="fw-bold"
                       style={{
                         color: "black",
-                        backgroundColor: "#F0FFFF",
+                        backgroundColor: "#e7f1ff",
                         border: "none",
                       }}
                     >
