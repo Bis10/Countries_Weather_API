@@ -1,17 +1,26 @@
-/* home.css */
-.no-border {
-  border: none !important; /* Important to override Bootstrap styles */
-  box-shadow: none !important; /* Removes shadow which can look like a border */
-}
+
 
 .card {
-  border: none !important; /* Remove border from card */
-}
-
-.accordion-item {
-  border: none !important; /* Remove border from accordion items */
-}
-
-.row {
   border: none !important;
 }
+
+.explore-header {
+  display: flex; 
+  font-size: 1.5rem;
+  text-align: center; 
+  height: 100%;
+}
+
+.custom-accordion {
+  border: 2px solid #007bff; 
+  border-radius: 5px;
+}
+
+.custom-accordion .accordion-item {
+  border: none;
+}
+
+
+
+
+
