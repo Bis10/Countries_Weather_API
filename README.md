@@ -30,7 +30,7 @@ This project is a React application that allows users to view country informatio
 - Node.js
 - npm
 
-### Installation
+## Installation
 
 1. Clone the repository:
 
@@ -56,19 +56,19 @@ This project is a React application that allows users to view country informatio
     npm run dev
     ```
 
-### Configuration
+## Configuration
 
-**Set up Firebase:**
+### Set up Firebase:
 
 - Create a new Firebase project at Firebase Console.
 - Enable Email/Password authentication in the Authentication section.
 - Create a Firestore database and set up rules for read/write access.
 - Configure Firebase in your project.
 
-### Live Page
-Currently, there is no live deployment for this project.
+## Live Page
+Live page can be access here: https://effervescent-pasca-6dd20f.netlify.app/
 
-### Screenshot
+## Screenshot
 Here are some screenshots of the application:
 
 | Register Page            | Home Page                |
@@ -79,7 +79,7 @@ Here are some screenshots of the application:
 |--------------------------|--------------------------|
 | ![Countries Screenshot](src/assets/countries-screenshot.png) | ![Single Country Screenshot](src/assets/singleCountry-screenshot.png) |
 
-### Sources
+## Sources
 - [React Documentation: Learn more about React](https://react.dev/learn)
 - [Redux Documentation: Understand Redux](https://redux.js.org/introduction/getting-started)
 - [Firebase Documentation: Set up Firebase here](https://firebase.google.com/docs/)
@@ -87,7 +87,7 @@ Here are some screenshots of the application:
 - [OpenWeatherMap API: Explore the weather API here](https://openweathermap.org/guide)
 - [Unsplash API: Get images ](https://unsplash.com/documentation)
 
-### Authors and Acknowledgment
+## Authors and Acknowledgment
 - [GitHub @martin-holland](https://github.com/martin-holland)
 - [GitHub @bishnu-suyel](https://github.com/bishnu-suyel)
 - [LinkedIn @bishnu-suyel](https://www.linkedin.com/in/bishnu-suyel)
