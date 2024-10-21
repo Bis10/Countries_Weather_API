@@ -250,16 +250,6 @@ const Home = () => {
         Whether you're planning a trip or just curious about different cultures,
         the Countries App makes it easy to find the information you need.
       </p>
-
-      {/* Footer Section */}
-      <footer
-        className="mt-5 p-3 text-center"
-        style={{ backgroundColor: "#d0e5ff", borderTop: "1px solid #e9ecef" }}
-      >
-        <p>
-          &copy; {new Date().getFullYear()} Countries App. All rights reserved.
-        </p>
-      </footer>
     </Container>
   );
 };
