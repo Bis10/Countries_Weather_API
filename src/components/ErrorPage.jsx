@@ -1,6 +1,6 @@
 import React from "react";
 import { Container, Row, Col, Button } from "react-bootstrap";
-import { Link } from "react-router-dom"; // Ensure you have react-router-dom installed
+import { Link } from "react-router-dom";
 
 const ErrorPage = () => {
   return (

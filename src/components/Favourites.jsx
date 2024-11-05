@@ -1,4 +1,3 @@
-// Favourites to be written.
 import { useEffect, useState } from "react";
 import { Button, Col, Container, Form, Row, Spinner } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
@@ -9,7 +8,6 @@ import {
 } from "../store/favouritesSlice";
 import { CountryCard } from "./CountryCard";
 
-// Favourites to be written
 const Favourites = () => {
   const dispatch = useDispatch();
   let countriesList = useSelector((state) => state.countries.countries);

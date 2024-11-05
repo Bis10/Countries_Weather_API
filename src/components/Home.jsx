@@ -8,14 +8,14 @@ import {
   Accordion,
 } from "react-bootstrap";
 import "../css/home.css";
-import globeImage from "../assets/globe.jpg"; // Adjust the path according to your structure
+import globeImage from "../assets/globe.jpg";
 import weather from "../assets/weather.avif";
 import languages from "../assets/languages.webp";
 import flags from "../assets/flags.jpg";
-import registerImage from "../assets/registration.jpg"; // Add your register image path
-import loginImage from "../assets/login.webp"; // Add your login image path
-import countriesImage from "../assets/countries.webp"; // Add your countries image path
-import favoritesImage from "../assets/favourites.png"; // Add your favorites image path
+import registerImage from "../assets/registration.jpg";
+import loginImage from "../assets/login.webp";
+import countriesImage from "../assets/countries.webp";
+import favoritesImage from "../assets/favourites.png";
 
 const Home = () => {
   return (
@@ -31,7 +31,7 @@ const Home = () => {
       {/* Globe Image Section */}
       <div className="text-center mb-4">
         <img
-          src={globeImage} // Use the imported local image
+          src={globeImage}
           alt="Globe"
           style={{
             width: "350px",
@@ -101,7 +101,7 @@ const Home = () => {
                   <Card className="mb-4">
                     <Card.Img
                       variant="top"
-                      src={weather} // Example image for countries
+                      src={weather}
                       alt="weather"
                       style={{
                         width: "100%",

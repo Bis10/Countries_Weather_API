@@ -17,8 +17,6 @@ const Layout = () => {
       <Row>
         <Navbar
           style={{ marginBottom: "1rem", backgroundColor: "#d0e5ff" }}
-          // bg="light"
-          // variant="light"
         >
           <Container className="justify-content-end">
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
